@@ -26,14 +26,17 @@ def get_movement(a=a):
     b = datetime.datetime.now() - a
     a = datetime.datetime.now()
     LP = b.microseconds/(1000000*1.0)
-    outputString = "Loop Time %5.2f " % ( LP )
+    # outputString = "Loop Time %5.2f " % ( LP )
 
     accnorm = math.sqrt(ACCx * ACCx + ACCy * ACCy + ACCz * ACCz)
-    outputString += " Acceleration: "+str(accnorm)
-    print(outputString)
+    # outputString += " Acceleration: "+str(accnorm)
+    if abs(accnorm - 8500) >= 1000:
+        return True
+    return False
+    # print(outputString)
 
 if __name__ == "__main__":
     while True:
         get_movement()
         #slow program down a bit, makes the output more readable
-        time.sleep(0.03)
+        time.sleep(0.3)
