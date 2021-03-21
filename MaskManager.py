@@ -14,7 +14,7 @@ def warn_user():
 
 # camera = PiCamera()
 image_file = "capture.png"
-cmd = "raspistill --timeout 100 -o Desktop/capture.png"
+cmd = "raspistill --timeout 100 -o capture.png"
 while True:
     # camera.capture(image_file)
     os.system(cmd)
