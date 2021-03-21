@@ -18,7 +18,7 @@ a = datetime.datetime.now()
 
 
 
-def get_movement():
+def get_movement(a=a):
     #Read the accelerometer
     ACCx = IMU.readACCx()
     ACCy = IMU.readACCy()
