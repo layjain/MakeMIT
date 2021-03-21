@@ -16,8 +16,6 @@ IMU.initIMU()       #Initialise the accelerometer, gyroscope and compass
 a = datetime.datetime.now()
 
 
-
-
 def get_movement(a=a):
     #Read the accelerometer
     ACCx = IMU.readACCx()
@@ -32,6 +30,7 @@ def get_movement(a=a):
 
     accnorm = math.sqrt(ACCx * ACCx + ACCy * ACCy + ACCz * ACCz)
     outputString += " Acceleration: "+str(accnorm)
+    prin(outputString)
 
 if __name__ == "__main__":
     while True:
