@@ -1,6 +1,6 @@
 # Main File
 from picamera import PiCamera
-from IMU import main
+import main
 import time
 
 def identify_mask():
