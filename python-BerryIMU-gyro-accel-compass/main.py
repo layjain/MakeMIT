@@ -30,7 +30,7 @@ def get_movement(a=a):
 
     accnorm = math.sqrt(ACCx * ACCx + ACCy * ACCy + ACCz * ACCz)
     outputString += " Acceleration: "+str(accnorm)
-    prin(outputString)
+    print(outputString)
 
 if __name__ == "__main__":
     while True:
